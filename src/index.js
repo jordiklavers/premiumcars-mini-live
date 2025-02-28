@@ -1,3 +1,5 @@
+// @ts-check
+// type="module"
 import gsap from "gsap";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -128,4 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  console.log("LALALALALA")
+  console.log("TESTTT")
+
+  console.log("LALALALALAL")
