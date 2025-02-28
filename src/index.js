@@ -1,11 +1,6 @@
-import { gsap } from "/gsap";
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-
+import gsap from "gsap";
 
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(Draggable, InertiaPlugin);
-  
     initTabSystem();
     initSwipers();
   });
@@ -117,7 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  
   function initSwipers() {
     const imageSwiper = new Swiper(".swiper", {
       slidesPerView: 1.5,
@@ -133,6 +127,4 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
-  
-  
   

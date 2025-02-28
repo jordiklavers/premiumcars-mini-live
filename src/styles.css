@@ -1,0 +1,121 @@
+:root {
+    --swiper-image-ratio: 33.3%; /* ratio 16:9 = 56.25% */
+  
+    --swiper-width: 50%;
+    --swiper-inactive-scale: .85; /* makes the other slide smaller */
+    
+    /* responsive settings */
+    --swiper-mobile-width: 90%;
+    --swiper-mobile-inactive-scale: .95;
+  }
+
+/* ------ LENIS ------- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ------ NAVIGATIE ------- */
+.nav,
+.nav-container,
+.nav_bg {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: var(--easing-default);
+}
+
+[data-scrolling-started="true"] .nav {
+  padding: 1em 0em;
+}
+
+[data-scrolling-started="true"]
+  .nav-container {
+  padding: 0em 1em;
+}
+
+[data-scrolling-started="true"] .nav_bg {
+  transform: scale(1, 1);
+}
+
+[data-scrolling-direction="down"] .nav {
+    transform: translateY(-100%);
+}
+
+
+/* ------ OVERIG ------- */
+
+.vooraad_image-more:hover #voorraadmoreimg {
+  transform: scale(1.2);
+}
+
+#voorraadmoreimg {
+  transition: transform 0.6s var(--easing-default);
+}
+
+.btn.is-link:hover .btn_icon-w {
+  transform: translateX(0.25em);
+}
+
+.btn_icon-w {
+  transition: transform 0.5s var(--easing-default);
+}
+
+[data-sold="Ja"] {
+  cursor: not-allowed !important;
+}
+
+[data-sold="Ja"] .vooraad_content-row {
+  opacity: 0.4;
+}
+
+[data-sold="Ja"] .btn {
+  pointer-events: none;
+}
+
+[data-sold="Ja"] .voorraad_sold {
+  display: flex;
+}
+
+
+/* ------ OVERIG ------- */
+.swiper {
+    position: relative;
+    width: 100%;
+    height: calc(var(--swiper-width) * var(--swiper-image-ratio) / 100%);
+    overflow: hidden;
+}
+
+.swiper-slide {
+  position: relative;
+  width: var(--swiper-width);
+  opacity: .5;
+  transform: scale(.84);
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  border-radius: 0.4285rem;
+}
+
+.swiper-backface-hidden .swiper-slide {
+  transform: scale(.84) translateZ(0);
+}
+        
+.swiper-slide.swiper-slide-active {  
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+
+.swiper-backface-hidden .swiper-slide.swiper-slide-active {
+  transform: scale(1) translateZ(0) !important;
+}
