@@ -1,5 +1,5 @@
-import gsap from 'gsap';
-import Swiper from 'swiper';
+import { gsap } from "gsap";
+import Swiper from 'swiper/bundle';
 
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(Draggable, InertiaPlugin);
