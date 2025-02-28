@@ -1,5 +1,5 @@
 import gsap from 'https://cdn.skypack.dev/gsap';
-import swiper from 'https://cdn.skypack.dev/swiper';
+import { Swiper } from 'https://cdn.skypack.dev/swiper';
 
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(Draggable, InertiaPlugin);
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   function initSwipers() {
-    const imageSwiper = new swiper(".swiper", {
+    const imageSwiper = new Swiper(".swiper", {
       slidesPerView: 1.5,
       centeredSlides: true,
       loop: true,
