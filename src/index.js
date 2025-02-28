@@ -1,7 +1,6 @@
 import gsap from 'https://cdn.skypack.dev/gsap';
 import swiper from 'https://cdn.skypack.dev/swiper';
 
-
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(Draggable, InertiaPlugin);
   
